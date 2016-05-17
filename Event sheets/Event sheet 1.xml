@@ -6,7 +6,7 @@
         <variable constant="0" name="S100" sid="9106583104369897" static="0" type="number">0</variable>
         <variable comment="score" constant="0" name="PlayerScore" sid="4241251672191499" static="0" type="number">0</variable>
         <variable comment="High score for the player" constant="0" name="HighScore" sid="1313979687370068" static="0" type="number">0</variable>
-        <variable comment="State of the Game" constant="0" name="GameState" sid="3583261684865156" static="0" type="number">1</variable>
+        <variable comment="State of the Game" constant="0" name="GameState" sid="3583261684865156" static="0" type="number">0</variable>
         <event-block sid="2959178342624672">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="4102872581853313" type="System">
@@ -21,6 +21,19 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="6344113811680669">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="7609534716732449" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4570141209118951" type="System">
+                            <param id="0" name="Variable">GameState</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="2124982010317843">
             <conditions>
@@ -40,9 +53,12 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="9082027075916327">
+                <event-block any="1" sid="9082027075916327">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="9285454113693926" type="Touch" />
+                        <condition id="4" name="On key code pressed" sid="8495585807154565" type="Keyboard">
+                            <param id="0" name="Keycode">32</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="8034960612156971" type="Sprite">
@@ -62,10 +78,10 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="4672923325240406" type="Sprite2">
-                            <param id="0" name="X">Self.X - 12</param>
+                            <param id="0" name="X">Self.X - 20</param>
                         </action>
                         <action id="-1" name="Set X" sid="5012311564413349" type="Sprite3">
-                            <param id="0" name="X">Self.X -11</param>
+                            <param id="0" name="X">Self.X - 20</param>
                         </action>
                     </actions>
                 </event-block>
@@ -87,7 +103,7 @@
                         <action id="-3" name="Create object" sid="8462540844232598" type="System">
                             <param id="0" name="Object to create">Sprite3</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">random(414,650)</param>
+                            <param id="2" name="X">random(898,1050)</param>
                             <param id="3" name="Y">265</param>
                         </action>
                     </actions>
@@ -125,7 +141,15 @@
                         <condition id="2" name="Is in touch" sid="4689209050099168" type="Touch" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="8848469437088568" type="System">
+                            <param id="0" name="Variable">GameState</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="6376316037477764" type="Sprite3" />
+                        <action id="-3" name="Set position" sid="3630060547590342" type="Sprite">
+                            <param id="0" name="X">200</param>
+                            <param id="1" name="Y">246</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

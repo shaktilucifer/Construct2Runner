@@ -10,6 +10,7 @@
     <unique-id>39bo09olw33u</unique-id>
     <saved-with-version>18400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -201,6 +202,9 @@
         <object-type name="Touch" sid="3712056891115025">
             <plugin id="Touch" />
         </object-type>
+        <object-type name="Keyboard" sid="5162575748301534">
+            <plugin id="Keyboard" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -215,6 +219,7 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Keyboard" uid="11" />
     </global-instances>
     <sounds-folder />
     <music-folder />
