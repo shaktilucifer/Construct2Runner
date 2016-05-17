@@ -87,9 +87,17 @@
                         <action id="-3" name="Create object" sid="8462540844232598" type="System">
                             <param id="0" name="Object to create">Sprite3</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">random(957,1257)</param>
-                            <param id="3" name="Y">264</param>
+                            <param id="2" name="X">random(414,650)</param>
+                            <param id="3" name="Y">265</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7581898831943037">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="140488131574844" type="Sprite3" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="26164450965712" type="Sprite3" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -109,6 +117,29 @@
                 </action>
                 <action behavior="Platform" id="11" name="Set enabled" sid="4814557858751179" type="Sprite">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9496795741288835">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="4689209050099168" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6376316037477764" type="Sprite3" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="1273882599142544">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="429733413636725" type="Sprite">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2278528862044866" type="System">
+                    <param id="0" name="Variable">GameState</param>
+                    <param id="1" name="Value">2</param>
                 </action>
             </actions>
         </event-block>
