@@ -8,7 +8,7 @@
         <height>500</height>
     </size>
     <margins>
-        <horizontal>500</horizontal>
+        <horizontal>1000</horizontal>
         <vertical>500</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
@@ -76,11 +76,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>898</x>
-                        <y>265</y>
+                        <x>973</x>
+                        <y>264</y>
                         <z>0</z>
                         <width>56</width>
                         <height>62</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite4" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>882</x>
+                        <y>251</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>90</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -68,9 +68,14 @@
                 </event-block>
                 <event-block sid="5120913828923008">
                     <conditions>
-                        <condition behavior="Platform" id="5" name="On jump" sid="4303603507912299" type="Sprite" />
+                        <condition behavior="Platform" id="9" name="On landed" sid="4303603507912299" type="Sprite" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="4" name="Set animation" sid="903639031013179" type="Sprite">
+                            <param id="0" name="Animation">&quot;standReady&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="5777689821207574">
                     <conditions>
@@ -78,10 +83,13 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="4672923325240406" type="Sprite2">
-                            <param id="0" name="X">Self.X - 20</param>
+                            <param id="0" name="X">Self.X - 12</param>
                         </action>
                         <action id="-1" name="Set X" sid="5012311564413349" type="Sprite3">
-                            <param id="0" name="X">Self.X - 20</param>
+                            <param id="0" name="X">Self.X - 12</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="9017079073464924" type="Sprite4">
+                            <param id="0" name="X">Self.X-12</param>
                         </action>
                     </actions>
                 </event-block>
@@ -91,7 +99,14 @@
                             <param id="0" name="Interval (seconds)">random(1,4)</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="8462540844232598" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(1050,1350)</param>
+                            <param id="3" name="Y">232</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="2114795854675433">
                     <conditions>
@@ -100,10 +115,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="8462540844232598" type="System">
+                        <action id="-3" name="Create object" sid="4861367966662212" type="System">
                             <param id="0" name="Object to create">Sprite3</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">random(898,1050)</param>
+                            <param id="2" name="X">random(898,1000)</param>
                             <param id="3" name="Y">265</param>
                         </action>
                     </actions>
