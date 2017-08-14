@@ -1,5 +1,5 @@
 # Construct2Runner
-This is a endless runner game Using construct2 framework.
+This is a endless runner game built using Construct2.
 
 It is deployed in chrome store.
  check it out at 
